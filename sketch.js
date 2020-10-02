@@ -26,7 +26,7 @@ function preload()
 {
   //To load monkey animation
   monkey_run =   loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png");
-  
+  monkey_stop = loadAnimation("sprtie_0.png");
 
   //To load banana and obstacle
   banana_img = loadImage("banana.png");
@@ -53,6 +53,7 @@ function setup() {
   //To create monkey sprite
   monkey=createSprite(60,325,10,10);  
   monkey.addAnimation("run",monkey_run);
+  monkey.addAnimation("stop", monkey_stop);
   //Scaling to adjust the animation
   monkey.scale=0.110;
   //monkey.debug=true;
@@ -233,6 +234,7 @@ function draw()
     obsGroup.destroyEach();
     monkey.x = 60;
     monkey.y = 325;
+    monkey.setAnimation = monkey_stop;
   }
   
   if(ground.x<0)
