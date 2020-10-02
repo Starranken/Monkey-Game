@@ -231,6 +231,8 @@ function draw()
     orangeGroup.destroyEach();
     obsGroup.setVelocityEach(0);
     obsGroup.destroyEach();
+    monkey.x = 60;
+    monkey.y = 325;
   }
   
   if(ground.x<0)
